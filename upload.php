@@ -13,3 +13,6 @@ public function upload(Request $request)
         'status' => 'uploaded'
     ]);
 }
+$request->validate([
+    'dokumen' => 'required|mimes:pdf'
+]);
